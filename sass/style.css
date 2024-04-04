@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sawarabi+Mincho&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-size: cover;
+  width: 100vw;
+  height: auto;
+  -webkit-backdrop-filter: blur(14px);
+          backdrop-filter: blur(14px);
+  z-index: 2;
+}
+header section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+header section div {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 0.5vh;
+  height: 10vh;
+  width: 19vw;
+}
+header section div img {
+  height: 9vh;
+  cursor: pointer;
+}
+header .sectTwo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+header .sectTwo hr {
+  width: 95vw;
+  background-color: black;
+  border-width: 1px;
+  border-color: black;
+}
+header .sectTwo label {
+  width: 90%;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 1.8em;
+}
+
+#divCenter {
+  font-size: 3.6em;
+  font-family: "Dancing Script", cursive;
+  font-style: normal;
+  width: auto;
+}
+
+main {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  margin-left: 5vw;
+  width: 90vw;
+  height: 75vh;
+  border-radius: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+main form {
+  background-color: rgba(255, 255, 255, 0.2941176471);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+main form input[type=text], main form input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+main form input[type=number] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+main form input[type=submit] {
+  background-color: rgba(103, 96, 5, 0.4588235294);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin: 2px 0;
+  cursor: pointer;
+  width: 100%;
+}
+main form input[type=submit]:hover {
+  background-color: rgba(187, 177, 35, 0.4588235294);
+}
+main section {
+  background: rgb(150, 0, 200);
+  background: linear-gradient(90deg, rgba(150, 0, 200, 0.35) 0%, rgba(102, 0, 255, 0.2) 100%);
+  height: auto;
+  width: 70vw;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 1vh 1vw;
+  border: 1px dashed;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  z-index: 1;
+}
+main section h2 {
+  font-size: 4em;
+  margin-bottom: 2vh;
+}
+main section p {
+  margin: 0 1vw;
+  font-size: 2.5em;
+}
+main section img {
+  margin: 1vh 0;
+  height: 10vh;
+}
+
+body {
+  width: 100vw;
+  background-image: url("../img/backpaper.jpg");
+  background-repeat: repeat;
+  background-size: contain;
+  font-size: 16px;
+}
+
+.nmain {
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+  flex-wrap: nowrap;
+}
+.nmain div label {
+  font-size: 2.5em;
+  margin: 0 2vw 2vh 0;
+}
+.nmain h2 {
+  font-size: 3.5em;
+  text-decoration: underline;
+  margin-bottom: 2vh;
+}
+.nmain h3 {
+  font-size: 2.5em;
+  text-decoration: underline;
+  margin-bottom: 2vh;
+}
+.nmain iframe {
+  height: 50vh;
+  margin-bottom: 2vh;
+  z-index: 1;
+}
+.nmain p {
+  margin: 0 2vw 2vh 2vw;
+  font-size: 2.8em;
+}
+.nmain div {
+  border-color: rgba(38, 38, 38, 0.187);
+  border-style: solid;
+  border-radius: 14px;
+  padding: 0 2vw;
+  width: 85%;
+  height: auto;
+  text-align: start;
+  margin-bottom: 2em;
+}
+.nmain div h2 {
+  font-size: 2.5em;
+  text-decoration: underline;
+}
+.nmain div img {
+  width: 75vw;
+  border-radius: 10px;
+}
+.nmain div ul {
+  margin-left: 4vw;
+  margin-bottom: 4vh;
+}
+.nmain div ul img {
+  width: 70vw;
+}
+.nmain div ul li {
+  margin-top: 2vh;
+}
+
+footer {
+  text-align: center;
+  font-size: 2em;
+  position: sticky;
+  bottom: 0;
+  background-size: cover;
+  width: 100vw;
+  height: 8vh;
+  -webkit-backdrop-filter: blur(14px);
+          backdrop-filter: blur(14px);
+  z-index: 2;
+}
+footer input[type=submit] {
+  background-color: rgba(103, 96, 5, 0.4588235294);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin: 2px 0;
+  cursor: pointer;
+  width: 10%;
+  height: 50%;
+}
+footer input[type=submit]:hover {
+  background-color: rgba(187, 177, 35, 0.4588235294);
+}
+
+@media screen and (min-width: 1151px) {
+  body {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 950px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 8px;
+  }
+}/*# sourceMappingURL=style.css.map */
