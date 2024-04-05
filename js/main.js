@@ -109,13 +109,13 @@ if (form) {
 
 if (registerinlog){
     registerinlog.addEventListener('click', () => {
-        location.href = "../index.html";
+        location.href = "https://catriel-kahla.github.io/kiwiskillawards/index.html";
     });
 }
 
 if (loginreg){
     loginreg.addEventListener('click', () => {
-        location.href = "pages/login.html";
+        location.href = "https://catriel-kahla.github.io/kiwiskillawards/pages/login.html";
     });
 }
 
