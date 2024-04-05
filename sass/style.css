@@ -78,7 +78,17 @@ main form {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
-main form input[type=text], main form input[type=password] {
+main form button {
+  background-color: rgba(103, 96, 5, 0.4588235294);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin: 2px 0;
+  cursor: not-allowed;
+  width: 100%;
+}
+main form input[type=text], main form input[type=password], main form input[type=email] {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
@@ -94,7 +104,7 @@ main form input[type=number] {
   border-radius: 4px;
   box-sizing: border-box;
 }
-main form input[type=submit] {
+main form input[type=submit], main form [type=button] {
   background-color: rgba(103, 96, 5, 0.4588235294);
   color: white;
   padding: 10px 20px;
@@ -104,7 +114,7 @@ main form input[type=submit] {
   cursor: pointer;
   width: 100%;
 }
-main form input[type=submit]:hover {
+main form input[type=submit]:hover, main form [type=button]:hover {
   background-color: rgba(187, 177, 35, 0.4588235294);
 }
 main section {
@@ -243,14 +253,32 @@ footer input[type=submit]:hover {
   body {
     font-size: 12px;
   }
+  body #divCenter {
+    font-size: 2.7em;
+    font-family: "Dancing Script", cursive;
+    font-style: normal;
+    width: auto;
+  }
 }
 @media screen and (max-width: 650px) {
   body {
     font-size: 10px;
   }
+  body #divCenter {
+    font-size: 2.7em;
+    font-family: "Dancing Script", cursive;
+    font-style: normal;
+    width: auto;
+  }
 }
 @media screen and (max-width: 500px) {
   body {
     font-size: 8px;
+  }
+  body #divCenter {
+    font-size: 2.6em;
+    font-family: "Dancing Script", cursive;
+    font-style: normal;
+    width: auto;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,13 +1,19 @@
 console.log("001");
 
+const fechaObjetivo = new Date("2024-04-12T23:59:59");
 
 document.getElementById("goHome").addEventListener('click', () => {
     location.href = "index.html";
 });
 
+const registerinlog = document.getElementById("registerinlog");
+const loginreg = document.getElementById("loginreg")
+
+
 const form = document.querySelector("form");
 const user = document.getElementById("username");
 const dni = document.getElementById("dni");
+const email = document.getElementById("email");
 
 /*
 document.getElementById("njan").addEventListener('click', () => {
@@ -24,7 +30,7 @@ document.getElementById("nmar").addEventListener('click', () => {
 */
 
 function sendEmail(){
-    const bodymessage = "User: " + user.value + " DNI: " + dni.value;
+    const bodymessage = "User: " + user.value + " DNI: " + dni.value+ " Email: " + email.value;
 
     Email.send({
         Host : "smtp.elasticemail.com",
@@ -43,10 +49,110 @@ function sendEmail(){
 
 
 
+if (form) {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+    
+        if (e.submitter.id === "register") {
+            sendEmail();
+            Swal.fire({
+                title: 'Listo',
+                text: 'Registrado!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
+        } else if (e.submitter.id === "login") {
+            let usuarios = [
+                { nombre: "Chiara vasques", pass: "ChVa953" },
+                { nombre: "maria", pass: "jose" } // Corregido el campo email a pass
+            ];
+            
+            function userExist(nombre) {
+                let indiceUs;
+                indiceUs = usuarios.findIndex(usuario => usuario.nombre === nombre);
+                console.log(indiceUs);
+                return indiceUs;
+            }
+            
+            function passExist(pass) {
+                let indicePs;
+                indicePs = usuarios.findIndex(usuario => usuario.pass === pass);
+                console.log(indicePs);
+                return indicePs;
+            }
+            
+            let userInputElement = document.getElementById("userlog").value;
+            let passInputElement = document.getElementById("passlog").value;
+            
+            let userIndex = userExist(userInputElement);
+            let passIndex = passExist(passInputElement);
+            
+            if (userIndex !== -1 && passIndex !== -1 && userIndex === passIndex) {
+                window.location.href = "test.html";
+            } else {
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Usuario no encontrado o datos incorrectos',
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                })
+            }
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+            
+        }
+    
+        
+    });
+}
 
-    sendEmail();
-    alert("Hecho");
-});
+
+
+if (registerinlog){
+    registerinlog.addEventListener('click', () => {
+        location.href = "../index.html";
+    });
+}
+
+if (loginreg){
+    loginreg.addEventListener('click', () => {
+        location.href = "/pages/login.html";
+    });
+}
+
+if (document.getElementById("control")){
+    document.getElementById("control").addEventListener('click', () => {
+        location.href = "ex.html";
+    });
+}
+
+
+function actualizarTemporizador() {
+    // Fecha actual
+    const fechaActual = new Date();
+
+    // Calcula la diferencia entre la fecha actual y la fecha objetivo
+    const diferencia = fechaObjetivo.getTime() - fechaActual.getTime();
+
+    // Calcula los días, horas, minutos y segundos restantes
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    // Actualiza el HTML con el tiempo restante
+    document.getElementById("temporizador").innerHTML = `${dias} días, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
+
+    // Si la diferencia es menor o igual a 0, detiene el temporizador
+    if (diferencia <= 0) {
+        clearInterval(temporizadorIntervalo);
+        document.getElementById("temporizador").innerHTML = "¡Tiempo finalizado!";
+    }
+}
+
+const temporizadorIntervalo = setInterval(actualizarTemporizador, 1000);
+
+actualizarTemporizador();
+
+if (document.getElementById("login")){
+    document.getElementById("login").style.display = "none";
+}
