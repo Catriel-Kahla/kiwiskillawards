@@ -115,7 +115,7 @@ if (registerinlog){
 
 if (loginreg){
     loginreg.addEventListener('click', () => {
-        location.href = "/pages/login.html";
+        location.href = "pages/login.html";
     });
 }
 
