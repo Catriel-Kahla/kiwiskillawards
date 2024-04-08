@@ -122,7 +122,7 @@ if (registerinlog){
 
 if (loginreg){
     loginreg.addEventListener('click', () => {
-        location.href = "/kiwiskillsawards/pages/login.html";
+        location.href = "/kiwiskillawards/pages/login.html";
     });
 }
 
