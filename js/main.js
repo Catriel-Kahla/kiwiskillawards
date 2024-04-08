@@ -71,7 +71,8 @@ if (form) {
                 { nombre: "Chiara vasques", pass: "vasC" },
                 { nombre: "Poncha07", pass: "P7ch" },
                 { nombre: "Emateamo", pass: "aEma" },
-                { nombre: "Caminob5", pass: "5Cnb" }
+                { nombre: "Caminob5", pass: "5Cnb" },
+                { nombre: "Dale don dale", pass: "DdDd" }
             ];
             
             function userExist(nombre) {
