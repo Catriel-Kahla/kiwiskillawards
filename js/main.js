@@ -1,3 +1,8 @@
+
+
+
+
+
 console.log("001");
 
 const fechaObjetivo = new Date("2024-04-12T23:59:59");
@@ -63,8 +68,10 @@ if (form) {
             })
         } else if (e.submitter.id === "login") {
             let usuarios = [
-                { nombre: "Chiara vasques", pass: "ChVa953" },
-                { nombre: "maria", pass: "jose" } // Corregido el campo email a pass
+                { nombre: "Chiara vasques", pass: "vasC" },
+                { nombre: "Poncha07", pass: "P7ch" },
+                { nombre: "Emateamo", pass: "aEma" },
+                { nombre: "Caminob5", pass: "5Cnb" }
             ];
             
             function userExist(nombre) {
@@ -88,7 +95,7 @@ if (form) {
             let passIndex = passExist(passInputElement);
             
             if (userIndex !== -1 && passIndex !== -1 && userIndex === passIndex) {
-                window.location.href = "test.html";
+                window.location.href = "home.html";
             } else {
                 Swal.fire({
                     title: 'Error',
@@ -109,13 +116,19 @@ if (form) {
 
 if (registerinlog){
     registerinlog.addEventListener('click', () => {
-        location.href = "https://catriel-kahla.github.io/kiwiskillawards/index.html";
+        location.href = "../index.html";
     });
 }
 
 if (loginreg){
     loginreg.addEventListener('click', () => {
-        location.href = "https://catriel-kahla.github.io/kiwiskillawards/pages/login.html";
+        location.href = "../pages/login.html";
+    });
+}
+
+if (document.getElementById("loginhome")){
+    document.getElementById("loginhome").addEventListener('click', () => {
+        location.href = "login.html";
     });
 }
 
@@ -140,19 +153,18 @@ function actualizarTemporizador() {
     const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
     // Actualiza el HTML con el tiempo restante
-    document.getElementById("temporizador").innerHTML = `${dias} días, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
+    document.getElementById("temporizador").innerHTML = `${dias} días, ${horas} horas, <br> ${minutos} minutos, ${segundos} segundos`;
 
     // Si la diferencia es menor o igual a 0, detiene el temporizador
     if (diferencia <= 0) {
         clearInterval(temporizadorIntervalo);
-        document.getElementById("temporizador").innerHTML = "¡Tiempo finalizado!";
+        document.getElementById("temporizador").innerHTML = "Test cargando...";
     }
 }
 
-const temporizadorIntervalo = setInterval(actualizarTemporizador, 1000);
 
-actualizarTemporizador();
 
-if (document.getElementById("login")){
-    document.getElementById("login").style.display = "none";
+if(document.getElementById("temporizador")){
+    actualizarTemporizador();
+    const temporizadorIntervalo = setInterval(actualizarTemporizador, 1000);
 }
