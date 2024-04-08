@@ -122,7 +122,7 @@ if (registerinlog){
 
 if (loginreg){
     loginreg.addEventListener('click', () => {
-        location.href = "/kiwiskillawards/pages/login.html";
+        location.href = "https://catriel-kahla.github.io/kiwiskillawards/pages/login.html";
     });
 }
 
