@@ -122,7 +122,7 @@ if (registerinlog){
 
 if (loginreg){
     loginreg.addEventListener('click', () => {
-        location.href = "pages/login.html";
+        window.location.href = "/pages/login.html";
     });
 }
 
