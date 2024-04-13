@@ -1,5 +1,6 @@
 
 const fechaObjetivo = new Date("2024-04-14T16:29:59");
+let testReady = false;
 
 document.getElementById("goHome").addEventListener('click', () => {
     location.href = "home.html";
@@ -53,7 +54,7 @@ if (localStorage.getItem('userIn') !== null) {
 
 
 
-const startingMinutes = 0.5;
+const startingMinutes = 4.5;
 let time = startingMinutes * 60;
 
 /*
@@ -217,8 +218,12 @@ function actualizarTemporizador() {
 
     // Si la diferencia es menor o igual a 0, detiene el temporizador
     if (diferencia <= 0) {
-        clearInterval(temporizadorIntervalo);
-        document.getElementById("temporizador").innerHTML = "Test cargando...";
+        //clearInterval(temporizadorIntervalo);
+        document.getElementById("temporizador").innerHTML = "Comenzar";
+        testReady = true;
+        document.getElementById("kiwitestbut").style.cursor = "pointer";
+        document.getElementById("labelKB").style.cursor = "pointer";
+        document.getElementById("temporizador").style.cursor = "pointer";
     }
 }
 
@@ -227,6 +232,15 @@ function actualizarTemporizador() {
 if(document.getElementById("temporizador")){
     actualizarTemporizador();
     const temporizadorIntervalo = setInterval(actualizarTemporizador, 1000);
+}
+
+if(document.getElementById("kiwitestbut")){
+    document.getElementById("kiwitestbut").addEventListener('click', () => {
+        if(testReady==true){
+            location.href = "test.html";
+        }
+    });
+    
 }
 
 function respuesta(num_preg, selected){

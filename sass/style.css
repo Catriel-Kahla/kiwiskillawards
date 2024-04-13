@@ -236,11 +236,11 @@ body {
   background-color: rgba(125, 98, 9, 0.164);
 }
 .nmain div img {
-  width: 20vw;
+  width: 25vw;
   border-radius: 10px;
 }
 .nmain div .rts {
-  width: 5vw;
+  width: 10vw;
 }
 .nmain div ul {
   margin-left: 4vw;
@@ -311,6 +311,12 @@ footer input[type=submit]:hover {
   .hmain .inHome p {
     font-size: 2.5em;
   }
+  .nmain div img {
+    width: 35vw;
+  }
+  .nmain div .rts {
+    width: 17vw;
+  }
 }
 @media screen and (max-width: 950px) {
   body {
@@ -334,6 +340,12 @@ footer input[type=submit]:hover {
   }
   .hmain .inHome p {
     font-size: 2.5em;
+  }
+  .nmain div img {
+    width: 45vw;
+  }
+  .nmain div .rts {
+    width: 15vw;
   }
 }
 @media screen and (max-width: 650px) {

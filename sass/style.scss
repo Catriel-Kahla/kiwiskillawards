@@ -257,11 +257,11 @@ body{
             background-color: rgba(125, 98, 9, 0.164);
         }
         img{
-            width: 20vw;
+            width: 25vw;
             border-radius: 10px;
         }
         .rts{
-            width: 5vw;
+            width: 10vw;
         }
         ul{
             margin-left: 4vw;
@@ -339,7 +339,19 @@ footer{
             p{font-size: 2.5em;}
         }
     }
+
+    .nmain{
+        div{
+            img{
+                width: 35vw;
+            }
+            .rts{
+                width: 17vw;
+            }
+        }
+    }
 }
+
 
 @media screen and (max-width: 950px){
     body{
@@ -361,6 +373,17 @@ footer{
             height: 15vh;
             label{font-size: 3em;}
             p{font-size: 2.5em;}
+        }
+    }
+
+    .nmain{
+        div{
+            img{
+                width: 45vw;
+            }
+            .rts{
+                width: 15vw;
+            }
         }
     }
 }
