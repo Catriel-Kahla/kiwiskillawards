@@ -200,8 +200,13 @@ body {
   height: auto;
   flex-wrap: nowrap;
 }
+.nmain h3 {
+  font-size: 2.5em;
+  text-decoration: underline;
+  margin-bottom: 2vh;
+}
 .nmain h2 {
-  font-size: 3.5em;
+  font-size: 3em;
   text-decoration: underline;
   margin-bottom: 2vh;
 }
@@ -226,18 +231,20 @@ body {
 }
 .nmain div label {
   font-size: 2.5em;
-  text-decoration: underline;
+}
+.nmain div label:hover {
+  background-color: rgba(125, 98, 9, 0.164);
 }
 .nmain div img {
-  width: 75vw;
+  width: 20vw;
   border-radius: 10px;
+}
+.nmain div .rts {
+  width: 5vw;
 }
 .nmain div ul {
   margin-left: 4vw;
   margin-bottom: 4vh;
-}
-.nmain div ul img {
-  width: 70vw;
 }
 .nmain div ul li {
   margin-top: 2vh;
@@ -263,7 +270,7 @@ footer input[type=submit] {
   border-radius: 4px;
   margin: 2px 0;
   cursor: pointer;
-  width: 10%;
+  width: 13%;
   height: 50%;
 }
 footer input[type=submit]:hover {

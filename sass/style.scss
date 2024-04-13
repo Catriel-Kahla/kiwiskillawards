@@ -218,12 +218,19 @@ body{
     height: auto;
     flex-wrap: nowrap;
     
-    
-    h2{
-        font-size: 3.5em;
+    h3{
+        font-size: 2.5em;
         text-decoration: underline;
         margin-bottom: 2vh;
     }
+
+    h2{
+        font-size: 3em;
+        text-decoration: underline;
+        margin-bottom: 2vh;
+    }
+
+
     iframe{
         height: 50vh;
         margin-bottom: 2vh;
@@ -244,18 +251,22 @@ body{
         margin-bottom: 2em;
         label{
             font-size: 2.5em;
-            text-decoration: underline;
+            //text-decoration: underline;
+        }
+        label:hover{
+            background-color: rgba(125, 98, 9, 0.164);
         }
         img{
-            width: 75vw;
+            width: 20vw;
             border-radius: 10px;
+        }
+        .rts{
+            width: 5vw;
         }
         ul{
             margin-left: 4vw;
             margin-bottom: 4vh;
-            img{
-                width: 70vw;
-            }
+            
             li{margin-top: 2vh;}
         }
     }
@@ -281,7 +292,7 @@ footer{
         border-radius: 4px;
         margin: 2px 0;
         cursor: pointer;
-        width: 10%;
+        width: 13%;
         height: 50%;
     }
     input[type="submit"]:hover {

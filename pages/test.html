@@ -15,7 +15,7 @@
             <div><img id="goHome" src="../img/kiwi.png" alt=""></div>
         </section>
         <section class="sectTwo">
-            <hr><label for="">Suerte tu!</label><hr>
+            <hr><label id="timer">04:30</label><hr>
         </section>
     </header>
     <hr>
@@ -26,97 +26,102 @@
 
         
         <div id="p1">
-            <h2>#01: 8 + 6 + 2 + 16 + 10 + 4 - 5 - 6 + 2 x 2</h2>
+            <h2>#01: </h2>
+            <p>8 + 6 + 2 + 16 + 10 + 4 - 5 - 6 + 2 x 2</p>
             <label>
-                <input type="radio" name="p1" value="1">37
+                <input type="radio" name="p1" value="1" onclick="respuesta(0,this)">37
             </label>
             <label>
-                <input type="radio" name="p1" value="2">39
+                <input type="radio" name="p1" value="2" onclick="respuesta(0,this)">39
             </label>
             <label>
-                <input type="radio" name="p1" value="3">48
+                <input type="radio" name="p1" value="3" onclick="respuesta(0,this)">48
             </label>
             <label>
-                <input type="radio" name="p1" value="4">74
+                <input type="radio" name="p1" value="4" onclick="respuesta(0,this)">74
             </label>
             <label>
-                <input type="radio" name="p1" value="5">76
+                <input type="radio" name="p1" value="5" onclick="respuesta(0,this)">76
             </label>
         </div>
 
         <div id="p2">
-            <h2>#02: 4 + 11 - 9 x 2 - 2 + 14</h2>
+            <h2>#02: </h2>
+            <p>4 + 11 - 9 x 2 - 2 + 14</p>
             <label>
-                <input type="radio" name="p2" value="1">0
+                <input type="radio" name="p2" value="1" onclick="respuesta(1,this)">0
             </label>
             <label>
-                <input type="radio" name="p2" value="2">9
+                <input type="radio" name="p2" value="2" onclick="respuesta(1,this)">9
             </label>
             <label>
-                <input type="radio" name="p2" value="3">34
+                <input type="radio" name="p2" value="3" onclick="respuesta(1,this)">34
             </label>
             <label>
-                <input type="radio" name="p2" value="4">77
+                <input type="radio" name="p2" value="4" onclick="respuesta(1,this)">77
             </label>
             <label>
-                <input type="radio" name="p2" value="5">84
+                <input type="radio" name="p2" value="5" onclick="respuesta(1,this)">84
             </label>
         </div>
 
         <div id="p3">
-            <h2>#03: 0 x 1 + 15 x 2 + 10 x 4</h2>
+            <h2>#03: </h2>
+            <p>0 x 1 + 15 x 2 + 10 x 4</p>
             <label>
-                <input type="radio" name="p3" value="1">0
+                <input type="radio" name="p3" value="1" onclick="respuesta(2,this)">0
             </label>
             <label>
-                <input type="radio" name="p3" value="2">16
+                <input type="radio" name="p3" value="2" onclick="respuesta(2,this)">16
             </label>
             <label>
-                <input type="radio" name="p3" value="3">36
+                <input type="radio" name="p3" value="3" onclick="respuesta(2,this)">36
             </label>
             <label>
-                <input type="radio" name="p3" value="4">40
+                <input type="radio" name="p3" value="4" onclick="respuesta(2,this)">40
             </label>
             <label>
-                <input type="radio" name="p3" value="5">70
+                <input type="radio" name="p3" value="5" onclick="respuesta(2,this)">70
             </label>
         </div>
 
         <div id="p4">
-            <h2>#04: 111 - 19 + 3 x 2</h2>
+            <h2>#04: </h2>
+            <p>111 - 19 + 3 x 2</p>
             <label>
-                <input type="radio" name="p4" value="1">67
+                <input type="radio" name="p4" value="1" onclick="respuesta(3,this)">67
             </label>
             <label>
-                <input type="radio" name="p4" value="2">95
+                <input type="radio" name="p4" value="2" onclick="respuesta(3,this)">95
             </label>
             <label>
-                <input type="radio" name="p4" value="3">98
+                <input type="radio" name="p4" value="3" onclick="respuesta(3,this)">98
             </label>
             <label>
-                <input type="radio" name="p4" value="4">136
+                <input type="radio" name="p4" value="4" onclick="respuesta(3,this)">136
             </label>
             <label>
-                <input type="radio" name="p4" value="5">139
+                <input type="radio" name="p4" value="5" onclick="respuesta(3,this)">139
             </label>
         </div>
         
         <div id="p5">
-            <h2>#05: 010 + 100 - 001 + 1 - 00010 + 01001 - 01010</h2>
+            <h2>#05: </h2>
+            <p>010 + 100 - 001 + 1 - 00010 + 01001 - 01010</p>
             <label>
-                <input type="radio" name="p5" value="1">91
+                <input type="radio" name="p5" value="1" onclick="respuesta(4,this)">91
             </label>
             <label>
-                <input type="radio" name="p5" value="2">101
+                <input type="radio" name="p5" value="2" onclick="respuesta(4,this)">101
             </label>
             <label>
-                <input type="radio" name="p5" value="3">121
+                <input type="radio" name="p5" value="3" onclick="respuesta(4,this)">121
             </label>
             <label>
-                <input type="radio" name="p5" value="4">129
+                <input type="radio" name="p5" value="4" onclick="respuesta(4,this)">129
             </label>
             <label>
-                <input type="radio" name="p5" value="5">1121
+                <input type="radio" name="p5" value="5" onclick="respuesta(4,this)">1121
             </label>
         </div>
         
@@ -131,19 +136,19 @@
                   erigiéndose como monumentos inmutables en el vasto paisaje de la tradición."
                    <br> ¿Cuál es el significado de la palabra "prosapia" en el contexto del texto?</p>
             <label>
-                <input type="radio" name="p6" value="1">Planta herbácea de la familia de las Solanáceas.
+                <input type="radio" name="p6" value="1" onclick="respuesta(5,this)">Planta herbácea de la familia de las Solanáceas.
             </label><br>
             <label>
-                <input type="radio" name="p6" value="2">Edificación imponente.
+                <input type="radio" name="p6" value="2" onclick="respuesta(5,this)">Edificación imponente.
             </label><br>
             <label>
-                <input type="radio" name="p6" value="3">Relato breve y conciso.
+                <input type="radio" name="p6" value="3" onclick="respuesta(5,this)">Relato breve y conciso.
             </label><br>
             <label>
-                <input type="radio" name="p6" value="4">Jardín exuberante.
+                <input type="radio" name="p6" value="4" onclick="respuesta(5,this)">Jardín exuberante.
             </label><br>
             <label>
-                <input type="radio" name="p6" value="5">Linaje noble o distinguido.
+                <input type="radio" name="p6" value="5" onclick="respuesta(5,this)">Linaje noble o distinguido.
             </label>
         </div>
 
@@ -156,19 +161,19 @@
                 plateado iluminando el paisaje con un manto de misterio y encanto."
                    <br> ¿Cuál es el propósito principal del viento en el texto?</p>
             <label>
-                <input type="radio" name="p7" value="1">Anunciar la llegada del día.
+                <input type="radio" name="p7" value="1" onclick="respuesta(6,this)">Anunciar la llegada del día.
             </label><br>
             <label>
-                <input type="radio" name="p7" value="2">Crear una atmósfera de misterio y encanto.
+                <input type="radio" name="p7" value="2" onclick="respuesta(6,this)">Crear una atmósfera de misterio y encanto.
             </label><br>
             <label>
-                <input type="radio" name="p7" value="3">Mover las hojas de los árboles con fuerza.
+                <input type="radio" name="p7" value="3" onclick="respuesta(6,this)">Mover las hojas de los árboles con fuerza.
             </label><br>
             <label>
-                <input type="radio" name="p7" value="4">Ahuyentar a los animales del bosque.
+                <input type="radio" name="p7" value="4" onclick="respuesta(6,this)">Ahuyentar a los animales del bosque.
             </label><br>
             <label>
-                <input type="radio" name="p7" value="5">Causar temor entre los habitantes del lugar.
+                <input type="radio" name="p7" value="5" onclick="respuesta(6,this)">Causar temor entre los habitantes del lugar.
             </label>
         </div>
 
@@ -181,29 +186,144 @@
                 su murmullo cristalino invitando a la contemplación y la serenidad."
                    <br> ¿Cuál es la atmósfera predominante descrita en el texto?</p>
             <label>
-                <input type="radio" name="p8" value="1">Sombría y desolada.
+                <input type="radio" name="p8" value="1" onclick="respuesta(7,this)">Sombría y desolada.
             </label><br>
             <label>
-                <input type="radio" name="p8" value="2">Animada y bulliciosa.
+                <input type="radio" name="p8" value="2" onclick="respuesta(7,this)">Animada y bulliciosa.
             </label><br>
             <label>
-                <input type="radio" name="p8" value="3">Serena y tranquila.
+                <input type="radio" name="p8" value="3" onclick="respuesta(7,this)">Serena y tranquila.
             </label><br>
             <label>
-                <input type="radio" name="p8" value="4">Caótica y tumultuosa.
+                <input type="radio" name="p8" value="4" onclick="respuesta(7,this)">Caótica y tumultuosa.
             </label><br>
             <label>
-                <input type="radio" name="p8" value="5">Melancólica y nostálgica.
+                <input type="radio" name="p8" value="5" onclick="respuesta(7,this)">Melancólica y nostálgica.
             </label>
         </div>
         
         <h3>Habilidades cognitivas</h3>
         
+        <div id="p9">
+            <h2>#09</h2>
+            <img src="../img/q2/Q2.jpg" alt=""><br>
+            <label>
+                <input type="radio" name="p9" value="1" onclick="respuesta(8,this)"><img class="rts" src="../img/q2/Q2-A.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p9" value="2" onclick="respuesta(8,this)"><img class="rts" src="../img/q2/Q2-B.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p9" value="3" onclick="respuesta(8,this)"><img class="rts" src="../img/q2/Q2-E-1.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p9" value="4" onclick="respuesta(8,this)"><img class="rts" src="../img/q2/Q2-F.png" alt="">
+            </label>
+        </div>
 
+        <div id="p10">
+            <h2>#10</h2>
+            <img src="../img/q1/Q13-scaled.jpg" alt=""><br>
+            <label>
+                <input type="radio" name="p10" value="1" onclick="respuesta(9,this)"><img class="rts" src="../img/q1/Q13-A.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p10" value="2" onclick="respuesta(9,this)"><img class="rts" src="../img/q1/Q13-B.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p10" value="3" onclick="respuesta(9,this)"><img class="rts" src="../img/q1/Q13-C.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p10" value="4" onclick="respuesta(9,this)"><img class="rts" src="../img/q1/Q13-F.png" alt="">
+            </label>
+        </div>
 
+        <div id="p11">
+            <h2>#11</h2>
+            <img src="../img/q3/Q12-scaled.jpg" alt=""><br>
+            <label>
+                <input type="radio" name="p11" value="1" onclick="respuesta(10,this)"><img class="rts" src="../img/q3/Q12-C.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p11" value="2" onclick="respuesta(10,this)"><img class="rts" src="../img/q3/Q12-D.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p11" value="3" onclick="respuesta(10,this)"><img class="rts" src="../img/q3/Q12-E.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p11" value="4" onclick="respuesta(10,this)"><img class="rts" src="../img/q3/Q12-H.png" alt="">
+            </label>
+        </div>
 
+        <div id="p12">
+            <h2>#12</h2>
+            <img src="../img/q4/Q16-scaled.jpg" alt=""><br>
+            <label>
+                <input type="radio" name="p12" value="1" onclick="respuesta(11,this)"><img class="rts" src="../img/q4/Q16-A.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p12" value="2" onclick="respuesta(11,this)"><img class="rts" src="../img/q4/Q16-B.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p12" value="3" onclick="respuesta(11,this)"><img class="rts" src="../img/q4/Q16-C.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="p12" value="4" onclick="respuesta(11,this)"><img class="rts" src="../img/q4/Q16-H.png" alt="">
+            </label>
+        </div>
 
+        <h3>Habilidades lógicas</h3>
 
+        <div id="p13">
+            <h2>#13</h2>
+            <p>Si "todos los triángulos tienen tres lados", ¿qué se puede decir sobre las formas con tres lados?</p>
+            <label>
+                <input type="radio" name="p13" value="1" onclick="respuesta(12,this)">Todas las formas con tres lados son triángulos.
+            </label><br>
+            <label>
+                <input type="radio" name="p13" value="2" onclick="respuesta(12,this)">Algunas formas con tres lados son triángulos.
+            </label><br>
+            <label>
+                <input type="radio" name="p13" value="3" onclick="respuesta(12,this)">Todas las formas con tres lados son polígonos.
+            </label><br>
+            <label>
+                <input type="radio" name="p13" value="4" onclick="respuesta(12,this)">Algunas formas con tres lados son polígonos.
+            </label>
+        </div>
+
+        <div id="p14">
+            <h2>#14</h2>
+            <p>Si "ningún continente es un océano", ¿qué se puede decir sobre el Atlántico?</p>
+            <label>
+                <input type="radio" name="p14" value="1" onclick="respuesta(13,this)">Todos los Atlánticos son continentes.
+            </label><br>
+            <label>
+                <input type="radio" name="p14" value="2" onclick="respuesta(13,this)">Algunos Atlánticos son continentes.
+            </label><br>
+            <label>
+                <input type="radio" name="p14" value="3" onclick="respuesta(13,this)">Todos los Atlánticos son océanos.
+            </label><br>
+            <label>
+                <input type="radio" name="p14" value="4" onclick="respuesta(13,this)">Algunos Atlánticos son océanos.
+            </label>
+        </div>
+
+        <div id="p15">
+            <h2>#15</h2>
+            <p>Si "algunos árboles son frutales", ¿qué se puede decir sobre las manzanos?</p>
+            <label>
+                <input type="radio" name="p15" value="1" onclick="respuesta(14,this)">Todos los manzanos son árboles.
+            </label><br>
+            <label>
+                <input type="radio" name="p15" value="2" onclick="respuesta(14,this)">Algunos manzanos son árboles.
+            </label><br>
+            <label>
+                <input type="radio" name="p15" value="3" onclick="respuesta(14,this)">Ningún manzano es frutal.
+            </label><br>
+            <label>
+                <input type="radio" name="p15" value="4" onclick="respuesta(14,this)">Algunos manzanos son frutales.
+            </label>
+        </div>
 
 
 
@@ -212,8 +332,8 @@
         <section class="sectTwo">
             <hr><label for=""></label><hr>
         </section>
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar" id="endTest">
     </footer>
-    <script src="../js/news.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

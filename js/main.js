@@ -1,14 +1,8 @@
 
-
-
-
-
-console.log("001");
-
-const fechaObjetivo = new Date("2024-04-12T23:59:59");
+const fechaObjetivo = new Date("2024-04-14T16:29:59");
 
 document.getElementById("goHome").addEventListener('click', () => {
-    location.href = "index.html";
+    location.href = "home.html";
 });
 
 const registerinlog = document.getElementById("registerinlog");
@@ -19,6 +13,48 @@ const form = document.querySelector("form");
 const user = document.getElementById("username");
 const dni = document.getElementById("dni");
 const email = document.getElementById("email");
+
+let crtansw = [2,2,5,3,1,5,2,3,1,3,4,4,1,3,1];
+let chosen = [];
+let correct = 0;
+
+let userIn;
+
+if (localStorage.getItem('userIn') !== null) {
+    console.log("001");
+    
+    userIn = JSON.parse(localStorage.getItem('userIn'));
+    
+} else if (window.location.href === "https://catriel-kahla.github.io/kiwiskillawards/pages/test.html") {
+    console.log("000");
+    location.href = "login.html";
+
+} else if (window.location.href === "https://catriel-kahla.github.io/kiwiskillawards/pages/ex.html") {
+    console.log("000");
+    location.href = "login.html";
+
+} else if (window.location.href === "https://catriel-kahla.github.io/kiwiskillawards/pages/control.html") {
+    console.log("000");
+    location.href = "login.html";
+
+} else if (window.location.href === "https://catriel-kahla.github.io/kiwiskillawards/pages/home.html") {
+    console.log("000");
+    location.href = "login.html";
+
+} else {
+    console.log("000");
+    userIn = {
+        "user":"",
+        "password":"",
+        "checkIn":"false",
+        "testDone":"false"
+    }
+}
+
+
+
+const startingMinutes = 0.5;
+let time = startingMinutes * 60;
 
 /*
 document.getElementById("njan").addEventListener('click', () => {
@@ -52,6 +88,23 @@ function sendEmail(){
     );
 }
 
+function sendEmailAnswers(){
+    const bodymessage = "User: " + user.value + " RTA elegidas: " + chosen + " Cantidad correctas: " + correct;
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "kiwinewsinform@gmail.com",
+        Password : "029E61314A003469BCFA7AE4AC798B81A318",
+        To : 'kiwinewsinform@gmail.com',
+        From : "kiwinewsinform@gmail.com",
+        Subject : userIn.user,
+        Body : bodymessage
+    }).then(
+      message => {
+        
+      }
+    );
+}
 
 
 if (form) {
@@ -96,6 +149,10 @@ if (form) {
             let passIndex = passExist(passInputElement);
             
             if (userIndex !== -1 && passIndex !== -1 && userIndex === passIndex) {
+                userIn.user = userInputElement;
+                userIn.password = passInputElement;
+                userIn.checkIn = true;
+                localStorage.setItem('userIn', JSON.stringify(userIn));
                 window.location.href = "home.html";
             } else {
                 Swal.fire({
@@ -129,7 +186,9 @@ if (loginreg){
 
 if (document.getElementById("loginhome")){
     document.getElementById("loginhome").addEventListener('click', () => {
+        localStorage.removeItem('userIn');
         location.href = "login.html";
+
     });
 }
 
@@ -169,3 +228,94 @@ if(document.getElementById("temporizador")){
     actualizarTemporizador();
     const temporizadorIntervalo = setInterval(actualizarTemporizador, 1000);
 }
+
+function respuesta(num_preg, selected){
+    chosen[num_preg] = selected.value;
+
+    id="p" + num_preg;
+
+    /*labels = document.getElementById(id).childNodes;
+    labels[3].style.backgroundColor = "white";
+    labels[5].style.backgroundColor = "white";
+    labels[7].style.backgroundColor = "white";
+
+    selected.parentNode.style.backgroundColor = "rgba(125, 98, 9, 0.164)";*/
+
+}
+
+function correctAnswers(){
+    correct = 0;
+    for(i=0; i<crtansw.length;i++){
+        if(crtansw[i]==chosen[i]){
+            correct++;
+        }
+    }
+
+    console.log("Correct answers: " + correct + chosen);
+}
+
+
+if(document.getElementById("endTest")){
+    document.getElementById("endTest").addEventListener('click', () => {
+        // Obtener el radio button seleccionado
+        var selected = document.querySelector('input[type="radio"]:checked');
+        document.getElementById("endTest").style.display="none"
+        time = -1;
+        if(selected) {
+            // Obtener el número de pregunta desde el id del div que contiene la pregunta
+            var num_preg = selected.parentNode.parentNode.id.substring(1);
+            
+            // Llamar a la función respuesta con los parámetros adecuados
+            respuesta(num_preg - 1, selected);
+            correctAnswers();
+        } else {
+            // Manejar el caso donde ningún radio button está seleccionado
+            console.error('Ninguna respuesta seleccionada.');
+        }
+    });
+}
+
+if(document.getElementById("timer")){
+    
+
+    const timer = document.getElementById("timer");
+
+    setInterval(updateTimer, 1000);
+
+    function updateTimer(){
+        const minutes = Math.floor(time/60);
+        let seconds = time % 60;
+
+        if(seconds<10){
+            timer.innerHTML = "0" + minutes + ":0" + seconds;
+        }else{
+            timer.innerHTML = "0" + minutes + ":" + seconds;
+        }
+
+        
+        if(time==0){
+            var selected = document.querySelector('input[type="radio"]:checked');
+            document.getElementById("endTest").style.display="none"
+            if(selected) {
+                // Obtener el número de pregunta desde el id del div que contiene la pregunta
+                var num_preg = selected.parentNode.parentNode.id.substring(1);
+            
+                // Llamar a la función respuesta con los parámetros adecuados
+                respuesta(num_preg - 1, selected);
+                correctAnswers();
+            } else {
+                // Manejar el caso donde ningún radio button está seleccionado
+                console.error('Ninguna respuesta seleccionada.');
+            }
+            time--;
+        }else if(time==-1){
+            timer.innerHTML = "00:00";
+        }else{
+            time--;
+        }
+
+        
+    }
+
+}
+
