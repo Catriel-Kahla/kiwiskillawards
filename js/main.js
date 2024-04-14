@@ -1,5 +1,5 @@
 
-const fechaObjetivo = new Date("2024-04-14T16:29:59");
+const fechaObjetivo = new Date("2024-04-16T16:59:59");
 let testReady = false;
 
 document.getElementById("goHome").addEventListener('click', () => {
