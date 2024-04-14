@@ -126,7 +126,8 @@ if (form) {
                 { nombre: "Poncha07", pass: "P7ch" },
                 { nombre: "Emateamo", pass: "aEma" },
                 { nombre: "Caminob5", pass: "5Cnb" },
-                { nombre: "Dale don dale", pass: "DdDd" }
+                { nombre: "Dale don dale", pass: "DdDd" },
+                { nombre: "Jeanu.3000", pass: "Jnu3" }
             ];
             
             function userExist(nombre) {
