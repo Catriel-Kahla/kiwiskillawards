@@ -54,7 +54,7 @@ if (localStorage.getItem('userIn') !== null) {
 
 
 
-const startingMinutes = 4.5;
+const startingMinutes = 5;
 let time = startingMinutes * 60;
 
 /*
