@@ -284,7 +284,7 @@ if(document.getElementById("temporizador")){
 if(document.getElementById("kiwitestbut")){
     document.getElementById("kiwitestbut").addEventListener('click', () => {
         if(testReady==true){
-            location.href = "test.html";
+            location.href = "explain.html";
         }
     });
     
