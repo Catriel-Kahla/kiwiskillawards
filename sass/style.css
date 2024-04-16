@@ -270,7 +270,7 @@ footer input[type=submit] {
   border-radius: 4px;
   margin: 2px 0;
   cursor: pointer;
-  width: 13%;
+  width: 20%;
   height: 50%;
 }
 footer input[type=submit]:hover {

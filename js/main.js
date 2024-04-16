@@ -90,7 +90,43 @@ function sendEmail(){
 }
 
 function sendEmailAnswers(){
-    const bodymessage = "User: " + user.value + " RTA elegidas: " + chosen + " Cantidad correctas: " + correct;
+    const bodymessage = "User: " + userIn.user + " RTA elegidas: " + chosen + " Cantidad correctas: " + correct;
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "kiwinewsinform@gmail.com",
+        Password : "029E61314A003469BCFA7AE4AC798B81A318",
+        To : 'kiwinewsinform@gmail.com',
+        From : "kiwinewsinform@gmail.com",
+        Subject : userIn.user,
+        Body : bodymessage
+    }).then(
+      message => {
+        
+      }
+    );
+}
+
+function sendEmailNoAnswers(){
+    const bodymessage = "User: " + userIn.user + " RTA elegidas: 0";
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "kiwinewsinform@gmail.com",
+        Password : "029E61314A003469BCFA7AE4AC798B81A318",
+        To : 'kiwinewsinform@gmail.com',
+        From : "kiwinewsinform@gmail.com",
+        Subject : userIn.user,
+        Body : bodymessage
+    }).then(
+      message => {
+        
+      }
+    );
+}
+
+function sendEmailStart(){
+    const bodymessage = "User: " + userIn.user + " ha comenzado";
 
     Email.send({
         Host : "smtp.elasticemail.com",
@@ -124,10 +160,20 @@ if (form) {
             let usuarios = [
                 { nombre: "Chiara vasques", pass: "vasC" },
                 { nombre: "Poncha07", pass: "P7ch" },
-                { nombre: "Emateamo", pass: "aEma" },
+                { nombre: "FranBa", pass: "aEma" },
                 { nombre: "Caminob5", pass: "5Cnb" },
                 { nombre: "Dale don dale", pass: "DdDd" },
-                { nombre: "Jeanu.3000", pass: "Jnu3" }
+                { nombre: "Jeanu3000", pass: "Jnu3" },
+                { nombre: "Agus", pass: "sUga" },
+                { nombre: "Mil", pass: "1Mil" },
+                { nombre: "China", pass: "naCh" },
+                { nombre: "User1", pass: "1usx" },
+                { nombre: "User2", pass: "usx2" },
+                { nombre: "User3", pass: "us3x" },
+                { nombre: "Ame", pass: "Roma" },
+                { nombre: "User4", pass: "4usX" },
+                { nombre: "User5", pass: "u5Sx" },
+                { nombre: "Pixel", pass: "xPix" }
             ];
             
             function userExist(nombre) {
@@ -244,6 +290,16 @@ if(document.getElementById("kiwitestbut")){
     
 }
 
+if(document.getElementById("explainBut")){
+    document.getElementById("explainBut").addEventListener('click', () => {
+        sendEmailStart();
+        setTimeout(() => {
+            location.href = "test.html";
+        }, 2000);
+    });
+    
+}
+
 function respuesta(num_preg, selected){
     chosen[num_preg] = selected.value;
 
@@ -266,7 +322,8 @@ function correctAnswers(){
         }
     }
 
-    console.log("Correct answers: " + correct + chosen);
+    console.log("Done!");
+    sendEmailAnswers();
 }
 
 
@@ -283,9 +340,12 @@ if(document.getElementById("endTest")){
             // Llamar a la función respuesta con los parámetros adecuados
             respuesta(num_preg - 1, selected);
             correctAnswers();
+            
         } else {
             // Manejar el caso donde ningún radio button está seleccionado
             console.error('Ninguna respuesta seleccionada.');
+            sendEmailNoAnswers();
+            
         }
     });
 }
@@ -321,10 +381,12 @@ if(document.getElementById("timer")){
             } else {
                 // Manejar el caso donde ningún radio button está seleccionado
                 console.error('Ninguna respuesta seleccionada.');
+                sendEmailNoAnswers();
             }
             time--;
         }else if(time==-1){
             timer.innerHTML = "00:00";
+            document.getElementById("testMain").innerHTML = "<h2>Kiwi Skill Awards</h2><h3>El tiempo acabó</h3>";
         }else{
             time--;
         }
