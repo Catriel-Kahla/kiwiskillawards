@@ -2,6 +2,23 @@
 const contenedor = document.getElementById('contenedor');
 const mapa = document.getElementById('mapa');
 
+barriosRealm = {
+    "name":"Far Far Away",
+    "isInHome":true,
+    "castle":0,
+    "travelling":0,
+    "path":0,
+    "alive":true,
+    "objective":"",
+    "knights":"",
+    "allayOne":"",
+    "allayTwo":"",
+    "allayThree":""
+}
+
+
+
+
 // Agregar evento de clic al contenedor
 contenedor.addEventListener('click', function(event) {
     // Obtener la posición horizontal y vertical del clic relativa al contenedor
