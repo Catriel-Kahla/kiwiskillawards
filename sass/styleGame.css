@@ -24,6 +24,62 @@ body {
   background-size: cover; /* Para ajustar la imagen al tamaño del contenedor */
 }
 
+.castlesIcon {
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+  width: 80px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.castlesIcon:hover {
+  background-color: rgba(16, 105, 157, 0.177);
+  box-shadow: 0 0 100px rgba(16, 105, 157, 0.7);
+  border-radius: 30%;
+}
+
+#castleOne {
+  top: 320px; /* Centra verticalmente el icono en el mapa */
+  left: 1616px; /* Centra horizontalmente el icono en el mapa */
+}
+
+#castleTwo {
+  top: 717px; /* Centra verticalmente el icono en el mapa */
+  left: 2397px; /* Centra horizontalmente el icono en el mapa */
+}
+
+#castleThree {
+  top: 982px; /* Centra verticalmente el icono en el mapa */
+  left: 1280px; /* Centra horizontalmente el icono en el mapa */
+}
+
+#castleFour {
+  top: 847px; /* Centra verticalmente el icono en el mapa */
+  left: 473px; /* Centra horizontalmente el icono en el mapa */
+}
+
+#castleFive {
+  top: 1219px; /* Centra verticalmente el icono en el mapa */
+  left: 1553px; /* Centra horizontalmente el icono en el mapa */
+}
+
+#castleSix {
+  top: 1926px; /* Centra verticalmente el icono en el mapa */
+  left: 1942px; /* Centra horizontalmente el icono en el mapa */
+}
+
+#castleSeven {
+  top: 1925px; /* Centra verticalmente el icono en el mapa */
+  left: 499px; /* Centra horizontalmente el icono en el mapa */
+}
+
+#castleEight {
+  top: 1578px; /* Centra verticalmente el icono en el mapa */
+  left: -405px; /* Centra horizontalmente el icono en el mapa */
+}
+
 #puntosCardinales {
   position: absolute;
   cursor: pointer;
