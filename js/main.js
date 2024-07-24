@@ -169,7 +169,7 @@ if (form) {
                 { nombre: "China", pass: "naCh" },
                 { nombre: "User1", pass: "1usx" },
                 { nombre: "User2", pass: "usx2" },
-                { nombre: "User3", pass: "us3x" },
+                { nombre: "Lautaro", pass: "Latr" },
                 { nombre: "Ame", pass: "Roma" },
                 { nombre: "User4", pass: "4usX" },
                 { nombre: "User5", pass: "u5Sx" },
